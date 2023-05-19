@@ -6,24 +6,38 @@
     "configurations": [
         {
             "type": "java",
-            "name": "SelectData",
+            "name": "option1",
             "request": "launch",
-            "mainClass": "samples.db.SelectData",
-            "projectName": "LibraryApp_3ae05fae"
+            "mainClass": "option1",
+            "projectName": "LibraryApp_df510c0f"
         },
         {
             "type": "java",
-            "name": "InsertData",
+            "name": "personalinfo",
             "request": "launch",
-            "mainClass": "samples.db.InsertData",
-            "projectName": "LibraryApp_3ae05fae"
+            "mainClass": "personalinfo",
+            "projectName": "LibraryApp_df510c0f"
         },
         {
             "type": "java",
-            "name": "CreateProductTable",
+            "name": "App",
             "request": "launch",
-            "mainClass": "samples.db.CreateProductTable",
-            "projectName": "LibraryApp_3ae05fae"
+            "mainClass": "chanleang.App",
+            "projectName": "LibraryApp_df510c0f"
+        },
+        {
+            "type": "java",
+            "name": "maindatabase",
+            "request": "launch",
+            "mainClass": "maindatabase",
+            "projectName": "LibraryApp_df510c0f"
+        },
+        {
+            "type": "java",
+            "name": "JDBCDemo",
+            "request": "launch",
+            "mainClass": "JDBCDemo",
+            "projectName": "LibraryApp_df510c0f"
         },
         {
             "type": "java",
@@ -34,18 +48,32 @@
         },
         {
             "type": "java",
-            "name": "Current File",
+            "name": "database",
             "request": "launch",
-            "mainClass": "${file}",
-            "vmArgs": "--module-path ${workspaceFolder}/lib/javafx-sdk-20/lib --add-modules javafx.controls,javafx.fxml"
+            "mainClass": "database",
+            "projectName": "LibraryApp_df510c0f"
         },
         {
             "type": "java",
-            "name": "App",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "LibraryApp_3ae05fae",
-            "vmArgs": "--module-path ${workspaceFolder}/lib/javafx-sdk-20/lib --add-modules javafx.controls,javafx.fxml"
+            "projectName": "LibraryApp_df510c0f",
+            "vmArgs": "--module-path \"C:/Users/User/Documents/i3-IPE/I3-course/LibraryApp/lib/javafx-sdk-20/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "LibraryApp_df510c0f",
+            "vmArgs": "--module-path \"C:/Users/User/Documents/i3-IPE/I3-course/LibraryApp/lib/javafx-sdk-20/lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
