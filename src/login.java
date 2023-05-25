@@ -15,38 +15,37 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 
 public class login {
-        @FXML
-        private Button btnlogin;
-        @FXML
-        private TextField txtusername;
-        @FXML
-        private TextField txtpassword;
-        private void handlelogin(ActionEvent event) throws IOException{
-            String username = txtusername.getText();
-            String password = txtpassword.getText();
-            if(username.equals("admin") && password.equals("admin") ){
-                App a = new App();
-                a.changeScene("pane1.fxml");
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Success");
-                alert.setHeaderText("Login sucessful");
-                alert.setContentText("Correct username and password");
-                alert.showAndWait();
-            }
-            else{
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Invalid");
-                alert.setHeaderText("Login unsucessful");
-                alert.setContentText("incorrect username and password");
-                alert.showAndWait();
-            }
+    @FXML
+    private Button btnlogin;
+    @FXML
+    private TextField txtusername;
+    @FXML
+    private TextField txtpassword;
 
-        }
-        
-        public void btnOKclicked(ActionEvent event) throws IOException{
-            handlelogin(event);
+    private void handlelogin(ActionEvent event) throws IOException {
+        String username = txtusername.getText();
+        String password = txtpassword.getText();
+        if (username.equals("admin") && password.equals("admin")) {
+            App a = new App();
+            a.changeScene("pane1.fxml");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Login sucessful");
+            alert.setContentText("Correct username and password");
+            alert.showAndWait();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Invalid");
+            alert.setHeaderText("Login unsucessful");
+            alert.setContentText("incorrect username and password");
+            alert.showAndWait();
         }
 
-            
-        }
-    
+    }
+
+    public void btnOKclicked(ActionEvent event) throws IOException {
+        handlelogin(event);
+    }
+
+}
+/* i */
