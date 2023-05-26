@@ -4,76 +4,53 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "type": "java",
-            "name": "option1",
+            "name": "Current File",
             "request": "launch",
-            "mainClass": "option1",
-            "projectName": "LibraryApp_df510c0f"
-        },
-        {
-            "type": "java",
-            "name": "personalinfo",
-            "request": "launch",
-            "mainClass": "personalinfo",
-            "projectName": "LibraryApp_df510c0f"
+            "mainClass": "${file}",
+            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
         },
         {
             "type": "java",
             "name": "App",
             "request": "launch",
-            "mainClass": "chanleang.App",
-            "projectName": "LibraryApp_df510c0f"
-        },
-        {
-            "type": "java",
-            "name": "maindatabase",
-            "request": "launch",
-            "mainClass": "maindatabase",
-            "projectName": "LibraryApp_df510c0f"
-        },
-        {
-            "type": "java",
-            "name": "JDBCDemo",
-            "request": "launch",
-            "mainClass": "JDBCDemo",
-            "projectName": "LibraryApp_df510c0f"
+            "mainClass": "App",
+            "projectName": "LibraryApp_c3079135",
+            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
         },
         {
             "type": "java",
             "name": "ConnectDB",
             "request": "launch",
             "mainClass": "samples.db.ConnectDB",
-            "projectName": "LibraryApp_3ae05fae"
+            "projectName": "LibraryApp_c3079135",
+            "vmArgs": "--module-pathC:C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
         },
         {
             "type": "java",
-            "name": "database",
+            "name": "CreateProductTable",
             "request": "launch",
-            "mainClass": "database",
-            "projectName": "LibraryApp_df510c0f"
+            "mainClass": "samples.db.CreateProductTable",
+            "projectName": "LibraryApp_c3079135",
+            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
         },
         {
             "type": "java",
-            "name": "Launch Current File",
+            "name": "InsertData",
             "request": "launch",
-            "mainClass": "${file}"
+            "mainClass": "samples.db.InsertData",
+            "projectName": "LibraryApp_c3079135",
+            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
         },
         {
             "type": "java",
-            "name": "Launch App",
+            "name": "SelectData",
             "request": "launch",
-            "mainClass": "App",
-            "projectName": "LibraryApp_df510c0f",
-            "vmArgs": "--module-path \"C:/Users/User/Documents/i3-IPE/I3-course/LibraryApp/lib/javafx-sdk-20/lib\" --add-modules javafx.controls,javafx.fxml"
-        },
-        {
-            "type": "java",
-            "name": "Launch App",
-            "request": "launch",
-            "mainClass": "App",
-            "projectName": "LibraryApp_df510c0f",
-            "vmArgs": "--module-path \"C:/Users/User/Documents/i3-IPE/I3-course/LibraryApp/lib/javafx-sdk-20/lib\" --add-modules javafx.controls,javafx.fxml"
+            "mainClass": "samples.db.SelectData",
+            "projectName": "LibraryApp_c3079135",
+            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
         }
     ]
 }
