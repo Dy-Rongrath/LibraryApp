@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
         "src",
-        "chanleang"
+        "LibraryApp"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [

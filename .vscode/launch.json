@@ -5,52 +5,53 @@
     "version": "0.2.0",
     "configurations": [
         
+        
         {
             "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",
-            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
+            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20 --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "LibraryApp_c3079135",
-            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
+            "projectName": "LibraryApp_87418eb5",
+            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20 --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "ConnectDB",
             "request": "launch",
             "mainClass": "samples.db.ConnectDB",
-            "projectName": "LibraryApp_c3079135",
-            "vmArgs": "--module-pathC:C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
+            "projectName": "LibraryApp_87418eb5",
+            "vmArgs": "--module-pathh C:/Users/DELL/LibraryApp/lib/javafx-sdk-20 --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "CreateProductTable",
             "request": "launch",
             "mainClass": "samples.db.CreateProductTable",
-            "projectName": "LibraryApp_c3079135",
-            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
+            "projectName": "LibraryApp_87418eb5",
+            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20 --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "InsertData",
             "request": "launch",
             "mainClass": "samples.db.InsertData",
-            "projectName": "LibraryApp_c3079135",
-            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
+            "projectName": "LibraryApp_87418eb5",
+            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20 --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "SelectData",
             "request": "launch",
             "mainClass": "samples.db.SelectData",
-            "projectName": "LibraryApp_c3079135",
-            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20"
+            "projectName": "LibraryApp_87418eb5",
+            "vmArgs": "--module-path C:/Users/DELL/LibraryApp/lib/javafx-sdk-20 --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
