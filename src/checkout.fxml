@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkout">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="mypane" blendMode="DARKEN" cache="true" maxHeight="-1.0" maxWidth="-1.0" onKeyPressed="#executekey" onMouseClicked="#execute" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #01B7EA;" VBox.vgrow="ALWAYS">
+         <children>
+            <TableView fx:id="tablebook" layoutY="149.0" prefHeight="168.0" prefWidth="640.0" style="-fx-background-color: #01B7EA;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="columnbookid" prefWidth="136.0" text="BookID" />
+                <TableColumn fx:id="columnbookname" prefWidth="142.0" text="Bookname" />
+                  <TableColumn fx:id="columnauthorname" prefWidth="120.0" text="Author's name" />
+                  <TableColumn fx:id="columnsubject" prefWidth="121.0" text="Subject" />
+                  <TableColumn fx:id="columnstatus" prefWidth="117.0" text="Status" />
+              </columns>
+            </TableView>
+            <Button fx:id="getdatabutton" layoutX="271.0" layoutY="317.0" mnemonicParsing="false" onAction="#btnOKclicked" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #b3cf99;" text="Getdata" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="271.0" />
+            <TextField fx:id="txtsearch" layoutX="23.0" layoutY="55.0" prefHeight="31.0" prefWidth="267.0" promptText="Enter the title " AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="350.0" />
+            <ImageView fx:id="backbutton" fitHeight="35.0" fitWidth="17.0" layoutX="14.0" layoutY="27.0" onTouchPressed="#handlebackbutton" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="609.0">
+               <image>
+                  <Image url="@../../../../../Downloads/8059e25af3bccce85e99b032f7c8e64e.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="36.0" layoutY="23.0" prefHeight="26.0" prefWidth="251.0" text="Librarian Access Only" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="353.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="counter" layoutX="68.0" layoutY="327.0" prefHeight="26.0" prefWidth="37.0" />
+            <Label layoutX="11.0" layoutY="331.0" text="There are" textFill="#0a0000" />
+            <Label layoutX="110.0" layoutY="332.0" text="results found" />
+            <Label layoutX="46.0" layoutY="96.0" text="Click on any book to add it to borrow" textFill="RED" />
+            <Button fx:id="onholdbutton" layoutX="517.0" layoutY="124.0" mnemonicParsing="false" onAction="#handlebtnonhold" style="-fx-background-color: #b3cf99;" text="Update" />
+            <TextField fx:id="bookidonhold" layoutX="459.0" layoutY="58.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #845ec2;" />
+            <TextField fx:id="booknameonhold" layoutX="555.0" layoutY="92.0" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #845ec2;" />
+            <TextField fx:id="authornameonhold" layoutX="555.0" layoutY="24.0" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #845ec2;" />
+            <TextField fx:id="subjectonhold" layoutX="555.0" layoutY="58.0" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #845ec2;" />
+            <TextField fx:id="usernameonhold" layoutX="459.0" layoutY="23.0" prefHeight="25.0" prefWidth="80.0" promptText="Add username" style="-fx-background-color: #845ec2;" />
+            <ChoiceBox fx:id="mychoicebox" layoutX="459.0" layoutY="92.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #4ffbdf;" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
