@@ -46,5 +46,4 @@ public class login {
     public void btnOKclicked(ActionEvent event) throws IOException {
         handlelogin(event);
     }
-
 }
