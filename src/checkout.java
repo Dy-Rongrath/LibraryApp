@@ -179,4 +179,76 @@ public void initialize(java.net.URL location, ResourceBundle resources) {
             bookidonhold.setText(Integer.toString(b.getBookid()));  
     });
     }
+    public void btnOKclicked(ActionEvent event) throws IOException {
+        setcelltable();
+        loaddatafromdatabase();
+        loaddatafromdatabase();
+        searchbook();
+        handlebackbutton();
+        clickontable();
+    }
+
+    public void execute(MouseEvent e) {
+        setcelltable();
+        loaddatafromdatabase();
+        loaddatafromdatabase();
+        searchbook();
+        handlebackbutton();
+        clickontable();
+    }
+
+    public void executekey(KeyEvent e) {
+        setcelltable();
+        loaddatafromdatabase();
+        loaddatafromdatabase();
+        searchbook();
+        handlebackbutton();
+        clickontable();
+    }
+    public void handleviewcart(ActionEvent event) throws IOException {
+        App a = new App();
+        a.changeScene("cart.fxml");
+    }
+
+    private void searchbook() {
+        txtsearch.setOnKeyReleased(e -> {
+            if (txtsearch.getText().equals("")) {
+                loaddatafromdatabase();
+            } else {
+                data.clear();
+                String sql = "Select * from book where bookname LIKE '%" + txtsearch.getText() + "%'"
+                +" UNION Select * from book where bookid LIKE '%" + txtsearch.getText() + "%'"
+                +" UNION Select * from book where subject LIKE '%" + txtsearch.getText() + "%'"
+                +" UNION Select * from book where authorname LIKE '%" + txtsearch.getText() + "%'";
+                int row2=0;
+                try {
+                    Connection conn = DriverManager.getConnection(URL, user, password);
+                    PreparedStatement pst = conn.prepareStatement(sql);
+                    ResultSet rs = pst.executeQuery();
+                    
+                    while (rs.next()) {
+                        data.add(new booklist(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5)));
+                        row2++;
+                    }
+                    String row3 = Integer.toString(row2);
+                    counter.setText(row3);
+                    tablebook.setItems(data);
+                } catch (Exception event) {
+                    System.out.println("Failed hz");
+                }
+            }
+        });
+
+    }
+    public void handlebackbutton() {
+        backbutton.setOnMouseClicked(e -> {
+            App a = new App();
+            try {
+                a.changeScene("pane1.fxml");
+            } catch (IOException e1) {
+                System.out.println("failed");
+            }
+        });
+    }
+
 }
