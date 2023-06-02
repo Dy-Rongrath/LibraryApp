@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -108,77 +107,7 @@ public void initialize(java.net.URL location, ResourceBundle resources) {
         }
         tablebook.setItems(data);
     }
-    private void clickontable(){
-        tablebook.setOnMouseClicked(e-> {
-                booklist b = tablebook.getItems().get(tablebook.getSelectionModel().getSelectedIndex());
-                int tmpbookid = b.getBookid();
-                String tmpstatus = "on-loan";
-                String username = usernameonhold.getText();
-                LocalDate now = LocalDate.now();
-                LocalDate then = now.plusDays(7);
-                long timenow = System.currentTimeMillis();
-                long timereturn = System.currentTimeMillis() + ((long) 7*24*60*60*1000);
-                //Date d = new Date(time);
-                //System.out.println(d);
-                if(b.getStatus().equals("available")){
-                try {
-                    String sql = "Insert into borrow(username,bookid,borrowstatus,date,returndate)values(?,?,?,?,?)";
-                    Connection conn= DriverManager.getConnection(URL, user, password);
-                    PreparedStatement pst = conn.prepareStatement(sql);
-                    pst.setString(1,username);
-                    pst.setInt(2,tmpbookid);
-                    pst.setString(3, tmpstatus);
-                    pst.setDate(4, new java.sql.Date(timenow));
-                    pst.setDate(5, new java.sql.Date(timereturn));
-                    pst.execute();
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("Success");
-                    alert.setHeaderText("Please return the book on "+then);
-                    alert.setContentText("Sucessfully added to borrow");
-                    alert.showAndWait();
 
-                } catch (Exception event) {
-                    System.out.println("failed");
-                }
-                try {
-                    String sql1 = "update book set status = ? where bookid = '"+tmpbookid+ "'";
-                    Connection conn1= DriverManager.getConnection(URL, user, password);
-                    PreparedStatement pst1 = conn1.prepareStatement(sql1);
-                    pst1.setString(1,"on-loan");
-                    pst1.execute();
-                } catch (Exception event) {
-                    System.out.println("failed d");
-                }
-            }else{
-                try {
-                    String sql = "Select * from borrow where bookid LIKE '%" + tmpbookid + "%'";
-                    Connection conn = DriverManager.getConnection(URL, user, password);
-                    PreparedStatement pst = conn.prepareStatement(sql);
-                    ResultSet rs = pst.executeQuery();
-                    while (rs.next()) {
-                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                        alert.setTitle("Book UNAVAILABLE");
-                        alert.setHeaderText("This book will be available on "+ rs.getDate(5));
-                        alert.setContentText("Added to on-hold");
-                        alert.showAndWait();
-                    }
-                    String sql1 = "Insert into onhold(bookid,username)values(?,?)";
-                    Connection conn1= DriverManager.getConnection(URL, user, password);
-                    PreparedStatement pst1 = conn1.prepareStatement(sql1);
-                    pst1.setInt(1,tmpbookid);
-                    pst1.setString(2,username);
-                    pst1.execute();
-                } catch (Exception event) {
-                    System.out.println("failed");
-                }
-                    
-            }
-            booknameonhold.setText(b.getBookname());  
-            authornameonhold.setText(b.getAuthorname());  
-            subjectonhold.setText(b.getSubject());  
-            bookidonhold.setText(Integer.toString(b.getBookid()));  
-    });
-    }
     public void btnOKclicked(ActionEvent event) throws IOException {
         setcelltable();
         loaddatafromdatabase();
@@ -249,6 +178,116 @@ public void initialize(java.net.URL location, ResourceBundle resources) {
                 System.out.println("failed");
             }
         });
+    }
+
+    private void clickontable(){
+            tablebook.setOnMouseClicked(e-> {
+                    booklist b = tablebook.getItems().get(tablebook.getSelectionModel().getSelectedIndex());
+                    int tmpbookid = b.getBookid();
+                    String tmpstatus = "on-loan";
+                    String username = usernameonhold.getText();
+                    LocalDate now = LocalDate.now();
+                    LocalDate then = now.plusDays(7);
+                    long timenow = System.currentTimeMillis();
+                    long timereturn = System.currentTimeMillis() + ((long) 7*24*60*60*1000);
+                    //Date d = new Date(time);
+                    //System.out.println(d);
+                    if(b.getStatus().equals("available")){
+                    try {
+                        String sql = "Insert into borrow(username,bookid,borrowstatus,date,returndate)values(?,?,?,?,?)";
+                        Connection conn= DriverManager.getConnection(URL, user, password);
+                        PreparedStatement pst = conn.prepareStatement(sql);
+                        pst.setString(1,username);
+                        pst.setInt(2,tmpbookid);
+                        pst.setString(3, tmpstatus);
+                        pst.setDate(4, new java.sql.Date(timenow));
+                        pst.setDate(5, new java.sql.Date(timereturn));
+                        pst.execute();
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Success");
+                        alert.setHeaderText("Please return the book on "+then);
+                        alert.setContentText("Sucessfully added to borrow");
+                        alert.showAndWait();
+
+                    } catch (Exception event) {
+                        System.out.println("failed");
+                    }
+                    try {
+                        String sql1 = "update book set status = ? where bookid = '"+tmpbookid+ "'";
+                        Connection conn1= DriverManager.getConnection(URL, user, password);
+                        PreparedStatement pst1 = conn1.prepareStatement(sql1);
+                        pst1.setString(1,"on-loan");
+                        pst1.execute();
+                    } catch (Exception event) {
+                        System.out.println("failed d");
+                    }
+                }else{
+                    try {
+                        String sql = "Select * from borrow where bookid LIKE '%" + tmpbookid + "%'";
+                        Connection conn = DriverManager.getConnection(URL, user, password);
+                        PreparedStatement pst = conn.prepareStatement(sql);
+                        ResultSet rs = pst.executeQuery();
+                        while (rs.next()) {
+                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setTitle("Book UNAVAILABLE");
+                            alert.setHeaderText("This book will be available on "+ rs.getDate(5));
+                            alert.setContentText("Added to on-hold");
+                            alert.showAndWait();
+                        }
+                        String sql1 = "Insert into onhold(bookid,username)values(?,?)";
+                        Connection conn1= DriverManager.getConnection(URL, user, password);
+                        PreparedStatement pst1 = conn1.prepareStatement(sql1);
+                        pst1.setInt(1,tmpbookid);
+                        pst1.setString(2,username);
+                        pst1.execute();
+                    } catch (Exception event) {
+                        System.out.println("failed");
+                    }
+                        
+                }
+                booknameonhold.setText(b.getBookname());  
+                authornameonhold.setText(b.getAuthorname());  
+                subjectonhold.setText(b.getSubject());  
+                bookidonhold.setText(Integer.toString(b.getBookid()));  
+        });
+    }
+public void handlebtnonhold(ActionEvent event){
+    String sql = "update book set status = ? where bookid = ?";
+    String status = mychoicebox.getValue();
+    String username = usernameonhold.getText();
+    int bookid = Integer.parseInt(bookidonhold.getText());  
+    long timenow = System.currentTimeMillis();
+    long timereturn = System.currentTimeMillis() + ((long) 7*24*60*60*1000);
+    try{
+    Connection conn = DriverManager.getConnection(URL, user, password);
+    PreparedStatement pst = conn.prepareStatement(sql);
+    pst.setString(1, status);
+    pst.setInt(2, bookid);
+    pst.execute();
+    }
+    catch(Exception e){
+            System.out.println("Failed");
+    }
+    if(mychoicebox.getValue().equals("on-loan")){
+        try {
+            String sql1 = "delete from onhold where bookid LIKE '%" + Integer.parseInt(bookidonhold.getText()) + "%'";
+            Connection conn1 = DriverManager.getConnection(URL, user, password);
+            PreparedStatement pst1 = conn1.prepareStatement(sql1);
+            pst1.execute();
+            String sql2 = "Insert into borrow(username,bookid,borrowstatus,date,returndate)values(?,?,?,?,?)";
+            Connection conn2= DriverManager.getConnection(URL, user, password);
+            PreparedStatement pst2 = conn2.prepareStatement(sql2);
+            pst2.setString(1, username);
+            pst2.setInt(2,bookid);
+            pst2.setString(3, status);
+            pst2.setDate(4, new java.sql.Date(timenow));
+            pst2.setDate(5, new java.sql.Date(timereturn));
+            pst2.execute();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(addbook.class.getName()).log(Level.SEVERE, null, ex);
+        }
+}
     }
 
 }
