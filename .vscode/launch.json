@@ -9,6 +9,13 @@
             "name": "App",
             "request": "launch",
             "mainClass": "App",
+            "projectName": "LibraryApp_930f4aac"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
             "projectName": "LibraryApp_96cdebd"
         },
         {
@@ -48,7 +55,7 @@
             "request": "launch",
             "mainClass": "samples.db.InsertData",
             "projectName": "LibraryApp_87418eb5",
-            "vmArgs": "--module-path C:/Users/ROG/Desktop/LibraryApp/lib --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path C:/Users/User/Documents/New folder (2)/LibraryApp/lib/javafx-sdk-20/lib --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -56,7 +63,7 @@
             "request": "launch",
             "mainClass": "samples.db.SelectData",
             "projectName": "LibraryApp_87418eb5",
-            "vmArgs": "--module-path C:/Users/ROG/Desktop/LibraryApp/lib --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path C:/Users/User/Documents/New folder (2)/LibraryApp/lib/javafx-sdk-20/lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
