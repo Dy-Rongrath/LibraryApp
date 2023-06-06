@@ -17,7 +17,7 @@ public class App extends Application {
     public void start(Stage primarystage) throws Exception {
         stg = primarystage;
         primarystage.setResizable(false);
-        Parent root = FXMLLoader.load(getClass().getResource("addbook.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("checkin.fxml"));
         primarystage.setTitle("Welcome to Library App");
         primarystage.setScene(new Scene(root, 650, 400));
         primarystage.show();
