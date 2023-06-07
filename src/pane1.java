@@ -22,7 +22,7 @@ public class pane1 implements Initializable{
     }
     @FXML
     private void home(MouseEvent event){
-        bp.setCenter(ap);
+        System.out.println("You're at the home page");
     }
     @FXML
     private void page01(MouseEvent event) throws IOException{
@@ -43,6 +43,16 @@ public class pane1 implements Initializable{
     private void page04(MouseEvent event) throws IOException{
         App a = new App();
         a.changeScene("addbook.fxml");
+    }
+    @FXML
+    private void page05(MouseEvent event) throws IOException{
+        App a = new App();
+        a.changeScene("removebook.fxml");
+    }
+    @FXML
+    private void page06(MouseEvent event) throws IOException{
+        App a = new App();
+        a.changeScene("login.fxml");
     }
     
 }
