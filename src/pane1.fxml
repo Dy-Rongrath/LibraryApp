@@ -15,19 +15,21 @@
       <VBox prefHeight="400.0" prefWidth="139.0" style="-fx-background-color: #01B7EA;" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onMouseClicked="#home" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="#f5f5f5" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#page01" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Checkout" textFill="#f5f5f5" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#page01" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Checkout/Update" textFill="#f5f5f5" />
             <Button layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#page02" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Checkin" textFill="#f5f5f5" />
             <Button layoutX="10.0" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#page03" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Onhold" textFill="#f5f5f5" />
             <Button layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#page04" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Addbook" textFill="#f5f5f5" />
+            <Button layoutX="10.0" layoutY="194.0" mnemonicParsing="false" onMouseClicked="#page05" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Removebook" textFill="#f5f5f5" />
+            <Button layoutX="10.0" layoutY="240.0" mnemonicParsing="false" onMouseClicked="#page06" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Log out" textFill="#f5f5f5" />
          </children>
       </VBox>
    </left>
    <right>
-      <AnchorPane fx:id="ap" prefHeight="375.0" prefWidth="426.0" style="-fx-background-color: #f6d7af;" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="ap" prefHeight="375.0" prefWidth="462.0" style="-fx-background-color: #f6d7af;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="273.0" fitWidth="410.0" layoutX="-74.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="206.0" fitWidth="418.0" layoutX="13.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Downloads/library.jpg" />
+                  <Image url="@../lib/22af305120a005e84d56c44b93b9db48-removebg-preview%20(2).png" />
                </image>
             </ImageView>
          </children></AnchorPane>

@@ -2,10 +2,10 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #01B7EA;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login">
    <children>
@@ -16,9 +16,9 @@
       </Label>
       <Label layoutX="175.0" layoutY="96.0" text="Enter your username and password to continue" textFill="#ba1313" />
       <TextField fx:id="txtusername" layoutX="253.0" layoutY="138.0" promptText="Enter your username" />
-      <TextField fx:id="txtpassword" layoutX="253.0" layoutY="175.0" promptText="Enter password" />
       <Label layoutX="190.0" layoutY="142.0" text="username" />
       <Label layoutX="190.0" layoutY="179.0" text="password" />
       <Button fx:id="btnlogin" layoutX="305.0" layoutY="217.0" mnemonicParsing="false" onAction="#btnOKclicked" text="Login" />
+      <PasswordField fx:id="txtpassword" layoutX="254.0" layoutY="175.0" promptText="Enter password" />
    </children>
 </AnchorPane>

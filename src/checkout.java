@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -234,12 +235,16 @@ public void initialize(java.net.URL location, ResourceBundle resources) {
                             alert.setContentText("Added to on-hold");
                             alert.showAndWait();
                         }
-                        String sql1 = "Insert into onhold(bookid,username)values(?,?)";
-                        Connection conn1= DriverManager.getConnection(URL, user, password);
-                        PreparedStatement pst1 = conn1.prepareStatement(sql1);
-                        pst1.setInt(1,tmpbookid);
-                        pst1.setString(2,username);
-                        pst1.execute();
+                        if(username.isEmpty()){
+                            System.out.println("hi");
+                        }else{
+                            String sql1 = "Insert into onhold(bookid,username)values(?,?)";
+                            Connection conn1= DriverManager.getConnection(URL, user, password);
+                            PreparedStatement pst1 = conn1.prepareStatement(sql1);
+                            pst1.setInt(1,tmpbookid);
+                            pst1.setString(2,username);
+                            pst1.execute();
+                        }
                     } catch (Exception event) {
                         System.out.println("failed");
                     }
