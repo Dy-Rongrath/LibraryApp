@@ -114,7 +114,7 @@
             <TextField fx:id="counter" layoutX="68.0" layoutY="327.0" prefHeight="26.0" prefWidth="37.0" />
             <Label layoutX="11.0" layoutY="331.0" text="There are" />
             <Label layoutX="110.0" layoutY="332.0" text="results found" />
-            <Label layoutX="193.0" layoutY="102.0" text="Click on any book to add it to borrow" textFill="RED" />
+            <Label layoutX="193.0" layoutY="102.0" text="Click on any book to remove it from borrow" textFill="RED" />
          </children>
     </AnchorPane>
   </children>
