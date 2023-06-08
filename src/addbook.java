@@ -49,7 +49,11 @@ public class addbook {
                 pst.setString(4, subject);
                 pst.setString(5, status);
                 pst.execute();
-                System.out.println("Data INserted");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Book Added");
+                alert.setHeaderText("Successful");
+                alert.setContentText("Added to database successfully");
+                alert.showAndWait();
             
 
             }catch(SQLException ex){
