@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="asset/css/updateprofile.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper-icon">
+            <svg style="width: 25px; height:25px;  rotate: 270deg;" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <b style="position: relative; left:-25%">Update profile</b>
+            <svg style="width: 25px; height:25px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+            </svg>
+        </div>
+        <div>
+            <img class="cover" src="asset/image/owner_ profile_image/cover_profile.jpg" alt="">
+        </div>
+
+        <div class="user-image">
+            <img style="width: 60px; height: 60px;" src="asset/image/user_profile.png" alt="">
+        </div>
+        <div class="input-user-info">
+            <input type="text" placeholder="username: _dourngdariya">
+            <input type="text" placeholder="Name: Dourng Dariya">
+            <input type="text" placeholder="Bio: It'z me Dariya!">
+            <input type="url" placeholder="Link: www.dariyadourngblog.com">
+            <input type="text" placeholder="From: Kampot ">
+            <input type="text" placeholder="Gender: Female">
+            <input type="number" placeholder="Date of Birth: 2003/10/09">
+        </div>
+   
+            <button id="updateprofile-btn">Update</button>
+        
+    </div>
+</body>
+<script>
+    const registerLink = document.getElementById('updateprofile-btn');
+
+// Add a click event listener to the "Register" link
+registerLink.addEventListener('click', function () {
+   // Redirect to the new page when the link is clicked
+   window.location.href = 'user.html';
+});
+ </script>
+</html>

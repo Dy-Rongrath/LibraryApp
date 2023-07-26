@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="asset/css/post.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper-icon">
+            <svg style="width: 25px; height:25px;  rotate: 270deg;" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <b style="position: relative; left:-25%">Communincation</b>
+            <svg style="width: 25px; height:25px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+            </svg>
+        </div>
+        <div>
+
+        </div>
+        <input type="search" placeholder="Search">
+        <i class='bx bx-search'></i>
+        <div class="post-chat">
+            <button class="post">Post</button>
+            <button id="chatbtn" class="chat">Chat</button>
+        </div>
+        <div class="post-place">
+            <p style="color: #00dfa3;">Add your Post</p>
+            <img style="width:25px; height:25px;" src="asset/image/post.png" alt="">
+        </div>
+        <div class="user-pro">
+            <img style="width: 60px; height: 60px;" src="asset/image/friend_image/niroth.png" alt="">
+            <div>
+                <b>Ek Moniroth</b>
+                <p style="font-size: 12px; color: gray;">Just Post a photo</p>
+            </div>
+        </div>
+        <div>
+            <img class="post-photo" src="asset/image/post-photo.png" alt="">
+        </div>
+        <div class="reaction">
+            <img style="width: 25px; height: 25px;" src="asset/image/react.png" alt="">
+            <img style="width: 25px; height: 25px;" src="asset/image/comment.png" alt="">
+            <img style="width: 25px; height: 25px;" src="asset/image/save.png" alt="">
+            <img style="width: 25px; height: 25px;" src="asset/image/share.png" alt="">
+        </div>
+        <div class="num-reaction">
+            <p>215</p>
+            <p style="position: relative; left: -4%;">14</p>
+            <p style="position: relative; left: -3%;">1</p>
+            <p style="position: relative; left: -2%;">1</p>
+        </div>
+        <div class="text-reaction">
+            <p>React</p>
+            <p>Comment</p>
+            <p>Save</p>
+            <p>Share</p>
+        </div>
+        <div class="user-pro">
+            <img style="width: 60px; height: 60px;" src="asset/image/friend_image/len.png" alt="">
+            <div>
+                <b>Chab Sreylen</b>
+                <p style="font-size: 12px; color: gray;">Just Post a photo 1 hour ago</p>
+            </div>
+        </div>
+        <div>
+            <img style="width:90%; height: 80px; object-fit: cover; margin: 0 5%; border-radius: 0.5rem ; margin-top: 5%;" src="asset/image/post-photo.png" alt="">
+        </div>
+        <nav class="bottom__navbar">
+    
+            <div class="nav__container">
+              <div class="active__nav"><img style="width: 25px; height: 25px;" src="asset/image/home.png" alt=""></div>
+              <div id="friendbtn"><img style="width: 25px; height: 25px;" src="asset/image/communicate_menu.png" alt=""></div>
+              <div><img style="width: 25px; height: 25px;" src="asset/image/search_menu.png" alt=""> </div>
+              <div id="us erprofilebtn"><img  style="width: 25px; height: 25px;" src="asset/image/profile_menu.png" alt=""></div>
+            </div>
+          </nav>
+    </div>
+    </div>
+</body>
+<script>
+  friendbtn.addEventListener('click', function () {
+ window.location.href = 'friend.html';
+    });
+
+   
+    userprofilebtn.addEventListener('click', function () {
+       window.location.href = 'user.html';
+    });
+
+    const chatbtn = document.getElementById('chatbtn')
+chatbtn.addEventListener('click', function() {
+  window.location.href = 'chat.html'; 
+});
+
+
+</script>
+
+</html>

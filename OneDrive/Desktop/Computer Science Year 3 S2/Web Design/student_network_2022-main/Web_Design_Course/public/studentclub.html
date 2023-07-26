@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="asset/css/studentclub.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper-icon">
+            <svg style="width: 25px; height:25px;  rotate: 270deg;" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <b style="position: relative; left:-25%">Student Club</b>
+            <svg style="width: 25px; height:25px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+            </svg>
+        </div>
+
+        <input type="search" placeholder="Search">
+        <i class='bx bx-search'></i>
+        <div class="post-chat">
+            <button class="post">Your Club</button>
+            <button id="chatbtn" class="chat">Student Club</button>
+        </div>
+
+           <P style="margin: 5% 5%; color: gray; position: relative; top: 2%;">ITC Student Club</P>
+        <div class="allchat">
+
+
+            <div class="userchat">
+    
+                <img style="width: 60px; height: 60px;" src="asset/image/cs.png" alt="">
+                <div>
+                    <b>Computer Science</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">Since  2003</p>
+                </div>
+                <button class="btn-join">Join</button>
+            </div>
+
+            <div class="userchat">
+                <img style="width: 60px; height: 60px;" src="asset/image/me.png" alt="">
+                <div>
+                    <b>Robotic Engineers</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">Since 1997</p>
+                </div>
+               <button class="btn-join">Join</button>
+            </div>
+            <div class="userchat">
+                <img style="width: 60px; height: 60px;" src="asset/image/ds.png" alt="">
+                <div>
+                    <b>Data Science Club</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">Since 2020</p>
+                </div>
+                <button class="btn-join">Join</button>
+            </div>
+            <div class="userchat">
+                <img style="width: 60px; height: 60px; border-radius: 100%;" src="asset/image/ae.png" alt="">
+                <div>
+                    <b>Artchitecture Club</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">Since 1996
+                </div>
+                <button class="btn-join">Join</button>
+            </div>
+        </div>
+
+        <nav class="bottom__navbar">
+
+            <div class="nav__container">
+                <div class="active__nav"><img style="width: 25px; height: 25px;" src="asset/image/home.png" alt="">
+                </div>
+                <div id="friendbtn"><img style="width: 25px; height: 25px;" src="asset/image/communicate_menu.png"
+                        alt="">
+                </div>
+                <div><img style="width: 25px; height: 25px;" src="asset/image/search_menu.png" alt=""> </div>
+                <div id="userprofilebtn"><img style="width: 25px; height: 25px;" src="asset/image/profile_menu.png"
+                        alt="">
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+</body>
+<script>
+    friendbtn.addEventListener('click', function () {
+        window.location.href = 'friend.html';
+    });
+
+    const userprofilebtn = document.getElementById('userprofilebtn');
+    userprofilebtn.addEventListener('click', function () {
+        window.location.href = 'user.html';
+    });
+
+    const chatbtn = document.getElementById('chatbtn');
+    chatbtn.addEventListener('click', function () {
+        window.location.href = 'chat.html';
+    });
+
+</script>
+
+</html>

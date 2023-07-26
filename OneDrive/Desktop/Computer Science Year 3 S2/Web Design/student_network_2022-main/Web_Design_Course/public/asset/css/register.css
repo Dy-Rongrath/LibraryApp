@@ -1,0 +1,68 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  height: 163.8mm;
+  width: 75.6mm;
+  margin: auto;
+  flex-shrink: 0;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+.icon-create-flex {
+  display: flex;
+  align-items: center;
+  margin: 10% 0 0 0;
+}
+
+.container h2 {
+  text-align: center;
+}
+.h1-img {
+  margin-top: 25%;
+}
+
+.h1-img,
+img .register-btn,
+b {
+  display: grid;
+  justify-content: center;
+}
+
+img {
+  object-fit: cover;
+  width: 233.79px;
+  height: 146px;
+  mix-blend-mode: color-burn;
+}
+
+p {
+  text-align: center;
+  position: relative;
+  font-size: 12px;
+  top: 2%;
+  margin: 0 5% 0 5%;
+}
+
+form {
+  display: grid;
+  margin-top: 10%;
+  gap: 1rem;
+}
+
+input,
+.register-btn {
+  padding: 0.5rem;
+  border: none;
+}
+input {
+  margin: 0 5% 0 5%;
+}
+
+.register-btn {
+  border-radius: 2rem;
+  background-color: #00dfa2;
+  color: white;
+  margin: 0 7.5% 0 7.5%;
+}

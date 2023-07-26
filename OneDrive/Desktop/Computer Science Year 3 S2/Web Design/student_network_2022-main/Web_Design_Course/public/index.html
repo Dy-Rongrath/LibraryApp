@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/login.css">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="h1-img">
+            <div>
+
+                <h2>Student Network</h2>
+            </div>
+            <div>
+
+            </div>
+            <img src="asset/image/student_icon.png" alt="">
+        </div>
+        <div class="user-input">
+            <form id="loginForm">
+                <input type="email" name="" id="emailInput" placeholder="Enter Email">
+                <input type="password" name="" id="passwordInput" placeholder="Enter Password">
+                <button class="login-btn"><b>Login</b></button>
+            </form>
+            <div class="regis-find">
+                <button class="regis" id="registerLink">Register</button>
+                <button class="find">Find Password</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the values entered by the user
+            const email = document.getElementById('emailInput').value;
+            const password = document.getElementById('passwordInput').value;
+
+            // You can do further validation if required before proceeding to the next page
+
+            // Redirect to the new page, passing email and password as URL parameters
+            window.location.href = 'dasboard.html' + '?email=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password);
+
+        });
+
+        const registerLink = document.getElementById('registerLink');
+
+        // Add a click event listener to the "Register" link
+        registerLink.addEventListener('click', function () {
+            // Redirect to the new page when the link is clicked
+            window.location.href = 'register.html';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="asset/css/friend.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper-icon">
+         <h2 style="margin: 0  2%;">Student Network</h2>
+        </div>
+
+        <input type="search" placeholder="Search">
+        <i class='bx bx-search'></i>
+        <div class="post-chat">
+            <button class="chat"> Connect Friend</button>
+            <button id="chatbtn" class="post">Request Friend</button>
+            <button id="chatbtn" class="post">Related C</button>
+        </div>
+
+           <P style="margin: 5% 5%; color: gray; position: relative; top: 2%;">Your Friend List</P>
+        <div class="allchat">
+
+
+            <div class="userchat">
+    
+                <img style="width: 60px; height: 60px;" src="asset/image/friend_image/niroth.png" alt="">
+                <div>
+                    <b> Moniroth</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">4 connected mutual</p>
+                </div>
+                <button class="btn-join">Message</button>
+            </div>
+
+            <div class="userchat">
+                <img style="width: 60px; height: 60px;" src="asset/image/friend_image/len.png" alt="">
+                <div>
+                    <b>Chab Sreylen</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">4 connected mutual</p>
+                </div>
+               <button class="btn-join">Message</button>
+            </div>
+            <div class="userchat">
+                <img style="width: 60px; height: 60px;" src="asset/image/friend_image/rachana.png" alt="">
+                <div>
+                    <b>Kem Rachana</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">4 connected mutual</p>
+                </div>
+                <button class="btn-join">Message</button>
+            </div>
+            <div class="userchat">
+                <img style="width: 60px; height: 60px; border-radius: 100%;" src="asset/image/friend_image/pich.png" alt="">
+                <div>
+                    <b>Din Pich</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">2 conected mutual
+                </div>
+                <button style="position: relative;" class="btn-join">Messages</button>
+               
+            </div>
+        </div>
+
+        <nav class="bottom__navbar">
+
+            <div class="nav__container">
+                <div><img style="width: 25px; height: 25px;" src="asset/image/home.png" alt="">
+                </div>
+                <div class="active__nav" id="friendbtn"><img style="width: 25px; height: 25px;" src="asset/image/communicate_menu.png"
+                        alt="">
+                </div>
+                <div><img style="width: 25px; height: 25px;" src="asset/image/search_menu.png" alt=""> </div>
+                <div id="userprofilebtn"><img style="width: 25px; height: 25px;" src="asset/image/profile_menu.png"
+                        alt="">
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+</body>
+<script>
+    friendbtn.addEventListener('click', function () {
+        window.location.href = 'friend.html';
+    });
+
+    const userprofilebtn = document.getElementById('userprofilebtn');
+    userprofilebtn.addEventListener('click', function () {
+        window.location.href = 'user.html';
+    });
+
+    const chatbtn = document.getElementById('chatbtn');
+    chatbtn.addEventListener('click', function () {
+        window.location.href = 'chat.html';
+    });
+
+</script>
+
+</html>

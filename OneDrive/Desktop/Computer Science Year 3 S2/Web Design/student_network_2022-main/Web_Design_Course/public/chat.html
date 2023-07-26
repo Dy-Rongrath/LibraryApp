@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="asset/css/chat.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper-icon">
+            <svg style="width: 25px; height:25px;  rotate: 270deg;" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <b style="position: relative; left:-25%">Communincation</b>
+            <svg style="width: 25px; height:25px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+            </svg>
+        </div>
+
+        <input type="search" placeholder="Search">
+        <i class='bx bx-search'></i>
+        <div class="post-chat">
+            <button class="post">Post</button>
+            <button id="chatbtn" class="chat">Chat</button>
+        </div>
+
+        <div class="all-user">
+            <div class="user1">
+                <div
+                    style="width: 15px; height: 15px; background-color: #10FF0B; border-radius: 100%; position: relative; top: 400%;; left:80%;">
+                </div>
+                <img style="width: 60px; height: 60px;" src="asset/image/friend_image/pich.png" alt="">
+                <b>DinPich</b>
+            </div>
+            <div class="user1">
+                <div
+                    style="width: 15px; height: 15px; background-color: #10FF0B; border-radius: 100%; position: relative; top: 400%;; left:70%;">
+                </div>
+                <img style="width: 60px; height: 60px;" src="asset/image/friend_image/sros.png" alt="">
+                <b>Sreysros</b>
+            </div>
+            <div class="user1">
+                <div
+                    style="width: 15px; height: 15px; background-color: #10FF0B; border-radius: 100%; position: relative; top: 400%;; left:70%;">
+                </div>
+                <img style="width: 60px; height: 60px;" src="asset/image/friend_image/niroth.png" alt="">
+
+                <b>Moniroth</b>
+            </div>
+            <div class="user1">
+                <div
+                    style="width: 15px; height: 15px; background-color: #10FF0B; border-radius: 100%; position: relative; top: 400%;; left:75%;">
+                </div>
+                <img style="width: 60px; height: 60px; border-radius: 100%;" src="asset/image/friend_image/wathnak.png"
+                    alt="">
+                <b>Wathnak</b>
+            </div>
+        </div>
+        <div class="allchat">
+
+
+            <div class="userchat">
+    
+                <img style="width: 60px; height: 60px;" src="asset/image/friend_image/niroth.png" alt="">
+                <div>
+                    <b>Moniroth</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">Just sent a file</p>
+                </div>
+                <p style="font-size: 12px; color: gray; margin-left: 42%;">10:03PM</p>
+            </div>
+
+            <div class="userchat">
+                <img style="width: 60px; height: 60px;" src="asset/image/friend_image/lean.png" alt="">
+                <div>
+                    <b>Kaknika</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">shared a book</p>
+                </div>
+                <p style="font-size: 12px; color: gray; margin-left: 42%;">07:03PM</p>
+            </div>
+            <div class="userchat">
+                <img style="width: 60px; height: 60px;" src="asset/image/friend_image/rachana.png" alt="">
+                <div>
+                    <b>Rachana</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">You: see u tmr</p>
+                </div>
+                <p style="font-size: 12px; color: gray; margin-left: 42%;">03:03PM</p>
+            </div>
+            <div class="userchat">
+                <img style="width: 60px; height: 60px; border-radius: 100%;" src="asset/image/friend_image/tong.png" alt="">
+                <div>
+                    <b>Kimtong</b>
+                    <p style="font-size: 12px; margin-top: 1rem; color: gray;">You: c u in 5 y</p>
+                </div>
+                <p style="font-size: 12px; color: gray; margin-left: 42%;">02:03PM</p>
+            </div>
+        </div>
+
+        <nav class="bottom__navbar">
+
+            <div class="nav__container">
+                <div class="active__nav"><img style="width: 25px; height: 25px;" src="asset/image/home.png" alt="">
+                </div>
+                <div id="friendbtn"><img style="width: 25px; height: 25px;" src="asset/image/communicate_menu.png"
+                        alt="">
+                </div>
+                <div><img style="width: 25px; height: 25px;" src="asset/image/search_menu.png" alt=""> </div>
+                <div id="userprofilebtn"><img style="width: 25px; height: 25px;" src="asset/image/profile_menu.png"
+                        alt="">
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+</body>
+<script>
+    friendbtn.addEventListener('click', function () {
+        window.location.href = 'friend.html';
+    });
+
+    const userprofilebtn = document.getElementById('userprofilebtn');
+    userprofilebtn.addEventListener('click', function () {
+        window.location.href = 'user.html';
+    });
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/register.css">
+    <title>Register Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon-create-flex">
+               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="25" height="25" fill="url(#pattern0)"/>
+                <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_222_417" transform="scale(0.0111111)"/>
+                </pattern>
+                <image id="image0_222_417" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAABOUlEQVR4nO3asUoDURRF0ROLOwr+txYiaW38CIvgH1kJokLKyEAqC4Wgb/TOWjBdII/N4SXFJAAAAAD8N1OSmyTPSd6T3CW5WPpQHSPvkhw+PXNsfjny/Lz+1Jes3fRF5Pl5WfqAa4h8SHK79CHXEHl3/BwnqiQP30R+THJ+6hcQkUewZJF7KHeyyC2UJYvcQlmyyC2UJYvcQlmyyC2UJYvcQlmyyC2UJYvcQlmyyC2UJYvcwuTlljGuvUE0xpM3iIRu5crVMcbkx3Cc8h9a7JbKssVuqSxb7JbKssVuqSxb7JbKssVuqSxb7JbKssVuqSxb7JbKssVuqSxb7JbKsscReyAv6fyx2NuRB1pz7Lckm6UPuYbY+yRnSx9wDbHvlz5Y19jb43WxP0a+XPpQnW3cywAAAJDOPgCEQhT7smKmsQAAAABJRU5ErkJggg=="/>
+                </defs>
+                </svg>
+
+                <a>Create an account</a>
+        </div>
+
+        <div class="h1-img">
+            <div>
+                <h2>Student Network</h2>
+            </div>
+            <img src="asset/image/student_icon.png" alt="">
+        </div>
+
+        <p>Please enter an email to use as your account</p>
+        <div class="user-input">
+            <form id="loginForm">
+                <input type="email" name="" id="emailInput" placeholder="Enter Email....">
+                <input type="text" name="" id="nameInput" placeholder="Enter your name">
+                <button class="register-btn"><b>OK</b></button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the values entered by the user
+            const email = document.getElementById('emailInput').value;
+            const password = document.getElementById('nameInput').value;
+
+            // You can do further validation if required before proceeding to the next page
+
+            // Redirect to the new page, passing email and password as URL parameters
+            window.location.href = 'dasboard.html' + '?email=' + encodeURIComponent(email) + '&text=' + encodeURIComponent(password);
+
+        });
+
+    </script>
+</body>
+</html>

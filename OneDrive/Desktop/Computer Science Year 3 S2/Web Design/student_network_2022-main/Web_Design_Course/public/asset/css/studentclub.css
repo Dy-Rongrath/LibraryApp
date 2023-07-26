@@ -1,0 +1,144 @@
+body {
+    font-family: "Inter", sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    height: 844px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 25px;
+   overflow:hidden;
+  }
+  
+
+  .upper-icon {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .upper-icon img:first-child{
+    margin-left: 0; 
+  }
+  
+  .upper-icon img:last-child {
+    margin-right: 0;
+  }
+  .upper-icon{
+    padding: 10px;
+  
+  }
+  
+  .upper-icon img{
+    height: 20px;
+  }
+input{
+    margin: 0 5% 0 5%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+input::placeholder{
+    position: relative;
+    left: 10%;
+  }
+  i{
+    margin: -6% 5% 0 10%;
+  }
+
+  .post-chat{
+    padding-top: 5%;
+    padding-left: 5%;
+    display: flex;
+    gap: 0.5rem;
+
+  }
+
+
+  .chat{
+    color: #00dfa2;
+    border-radius: 5px;
+background: rgba(0, 223, 162, 0.25);
+  }
+ .post, .chat{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.2rem;
+  }
+
+.post:hover, .chat:hover{
+    color: #00dfa2;
+    border-radius: 5px;
+background: rgba(0, 223, 162, 0.25);
+}
+.user1{
+    gap: .3rem;
+    display: grid;
+  
+}
+ .all-user{
+    margin: 0 5% 0 5%;
+    display: flex;
+   justify-content: space-between;
+}
+.allchat{
+    display: grid;
+    margin: 10% 0;
+    gap: 2rem;
+}
+.userchat{
+
+    display: flex;
+   align-items: start;
+    gap: 0.5rem;
+    margin: 0 5%;
+}
+
+.active__nav{
+    background-color: rgba(0, 223, 162, 0.50);
+    border-radius: 100%;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    .nav__container{
+        display: flex;
+        gap: 4rem;
+        align-items:center;
+        justify-content: center;
+        margin: 0 5% 0 5%;
+        border-radius: .5rem; 
+      }
+    
+      .bottom__navbar{
+        position: relative;
+        top: 22%;
+    margin: 0 5% 0 5%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+      }
+    
+    
+      #friendbtn:hover, #userprofilebtn:hover{
+        background-color: rgba(0, 223, 162, 0.50);
+        border-radius: 100%;
+      padding: .5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;}
+      
+    .btn-join{
+      position: relative;
+      left:23%;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+background: #00DFA2;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    } 

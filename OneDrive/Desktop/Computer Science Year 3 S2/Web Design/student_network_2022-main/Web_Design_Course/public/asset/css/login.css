@@ -1,0 +1,75 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  Height: 163.8mm;
+  Width: 75.6mm;
+    margin: auto;
+    flex-shrink: 0;
+    border: 1px solid black;
+    border-radius: 25px;
+  }
+  .container h2 {
+    text-align: center; 
+  }
+  .h1-img {
+    margin-top: 25%;
+  }
+  
+  .h1-img, img
+  .login-btn,
+  b {
+    display: grid;
+    justify-content: center;
+
+  }
+  
+  img {
+    object-fit: cover;
+    width: 233.79px;
+    height: 146px;
+    mix-blend-mode: color-burn;
+  }
+  
+  form {
+    display: grid;
+    margin-top: 10%;
+    gap: 1rem;
+  }
+  
+  input,
+  .login-btn {
+    padding: 0.5rem;
+    border: none;
+    margin: 0 5% 0 5%;
+
+  }
+  
+  .login-btn {
+    border-radius: 2rem;
+    background-color: #00dfa2;
+    color: white;
+    margin: 0 7.5% 0 7.5%;
+  }
+  
+  .regis-find {
+    margin-top: 25%;
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+    margin-bottom: 25%;
+
+  }
+
+  .regis, .find{
+    font-size: smaller;
+    border: none;
+    background-color: transparent;
+    color: grey;
+  }
+  .regis:hover,
+  .find:hover {
+    cursor:pointer;
+    color: #00dfa2;
+  }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+    , initial-scale=1.0">
+  <title>User Profile Page</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="asset/css/user.css">
+</head>
+
+<body>
+
+  <div class="container blur">
+    <div class="upper-icon">
+      <svg style="width: 25px; height:25px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+      <button id="setting-btn" style="background-color: transparent;">
+        <svg style="width: 25px; height:25px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+        </svg>
+      </button>
+    </div>
+    <img class="cover" src="asset/image/owner_ profile_image/cover_profile.jpg" alt="">
+    <div class="user-image">
+      <img style="width: 110px;height: 110px;" src="asset/image/user_profile.png" alt="">
+    </div>
+    <div class="username">
+      <b>_dourngdariya</b>
+    </div>
+    <div class="post-info">
+      <b style="border-bottom: 4px solid black;">4 medias</b>
+      <b>127 Friends</b>
+    </div>
+    <div class="user-ifo">
+      <div>
+        <b>Department</b>
+        <b>: GIC</b>
+      </div>
+      <div>
+        <b>Name</b>
+        <b>: Dourng Dariya</b>
+      </div>
+      <div>
+        <b>ID</b>
+        <b>: e20200306</b>
+      </div>
+    </div>
+
+    <div class="profile-btn">
+      <button id="updateprofile-btn">Update Profile</button>
+      <button>Share Profile</button>
+    </div>
+    <div>
+      <div class="post-label">
+        <b style="border-bottom: 4px solid black;">Photos</b>
+        <b>Videos</b>
+      </div>
+      <div class="post-img">
+        <div>
+          <img style="height: 150px; width: 160px;" src="asset/image/imag_page1/img-post1.png" alt="">
+          <img style="height: 150px; width: 160px;" src="asset/image/imag_page1/img-post2.png" alt="">
+        </div>
+        <div>
+
+          <img style="height: 150px; width: 160px;" src="asset/image/imag_page1/img-post3.png" alt="">
+          <img style="height: 150px; width: 160px;" src="asset/image/imag_page1/img-post4.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <nav class="bottom__navbar">
+
+      <div class="nav__container">
+        <div><img style="width: 25px; height: 25px;" src="asset/image/home.png" alt=""></div>
+        <div><img style="width: 25px; height: 25px;" src="asset/image/communicate_menu.png" alt=""></div>
+        <div><img style="width: 25px; height: 25px;" src="asset/image/search_menu.png" alt=""> </div>
+        <div class="active__nav"><img src="asset/image/profile_menu.png" alt=""></div>
+      </div>
+    </nav>
+  </div>
+
+  <script>
+    const registerLink = document.getElementById('updateprofile-btn');
+
+    // Add a click event listener to the "Register" link
+    registerLink.addEventListener('click', function () {
+      // Redirect to the new page when the link is clicked
+      window.location.href = 'updateprofile.html';
+    });
+
+    settingBtn.addEventListener('click', () => {
+      document.body.classList.remove('blur');
+    });
+
+    // Add blur
+    function addBlur() {
+      document.body.classList.add('blur');
+    }
+
+    // Remove blur 
+    function removeBlur() {
+      document.body.classList.remove('blur');
+    }
+
+    // Click to add blur
+    settingBtn.addEventListener('click', addBlur);
+
+    // Second click to remove blur
+    settingBtn.addEventListener('click', removeBlur);
+  </script>
+</body>
+
+</html>
